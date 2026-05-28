@@ -1,0 +1,17 @@
+algoritmo "LoginSenhaPredefinida"
+
+var
+   senha: caractere
+inicio
+   senha <- ""
+
+   enquanto senha <> "senha123" faca
+      escreval("Digite a senha: ")
+      leia(senha)
+      se senha <> "senha123" entao
+         escreval("Senha incorreta, tente novamente.")
+      fimse
+   fimenquanto
+
+   escreval("Bem-vindo ao sistema!")
+fimalgoritmo
