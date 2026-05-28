@@ -1,2 +1,2 @@
 # Logica-da-programacao
-Serão enviados aqui os trabalhos da disciplina
+Serão enviados nesse repositório os trabalhos da disciplina de lógica de programação
