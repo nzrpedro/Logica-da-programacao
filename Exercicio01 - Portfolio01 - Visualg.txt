@@ -1,0 +1,100 @@
+algoritmo "MenuLanchonete"
+
+var
+   codigo: vetor[1..100] de inteiro
+   i, quantidadePedidos: inteiro
+   item: inteiro
+   estadoPedido: logico
+   pagamentoOuCancelamento: inteiro
+   precoPedido: real
+   formaPagamento: inteiro
+
+inicio
+
+   estadoPedido <- verdadeiro
+   quantidadePedidos <- 0
+   precoPedido <- 0
+
+   escreval("=====- MENU DA LANCHONETE -=====")
+   escreval("1 - Cachorro Quente (R$ 8,00)")
+   escreval("2 - Hambúrguer (R$ 15,00)")
+   escreval("3 - Misto Quente (R$ 10,00)")
+   escreval("4 - Refrigerante (R$ 5,00)")
+   escreval("5 - Encerrar Pedido")
+   escreval("================================")
+
+   enquanto (estadoPedido = verdadeiro) faca
+      escreval("Digite o código do item desejado: ")
+      leia(item)
+      escolha item
+         caso 1
+            quantidadePedidos <- quantidadePedidos + 1
+            codigo[quantidadePedidos] <- item
+            precoPedido <- precoPedido + 8
+            escreval("Cachorro Quente adicionado!")
+         caso 2
+            quantidadePedidos <- quantidadePedidos + 1
+            codigo[quantidadePedidos] <- item
+            precoPedido <- precoPedido + 15
+            escreval("Hambúrguer adicionado!")
+         caso 3
+            quantidadePedidos <- quantidadePedidos + 1
+            codigo[quantidadePedidos] <- item
+            precoPedido <- precoPedido + 10
+            escreval("Misto Quente adicionado!")
+         caso 4
+            quantidadePedidos <- quantidadePedidos + 1
+            codigo[quantidadePedidos] <- item
+            precoPedido <- precoPedido + 5
+            escreval("Refrigerante adicionado!")
+         caso 5
+            escreval("Pedido Finalizado!")
+            estadoPedido <- falso
+         outrocaso
+            escreval("Código inválido!")
+      fimescolha
+   fimenquanto
+
+   escreval("")
+   escreval("==== ITENS DO PEDIDO ====")
+
+   para i de 1 ate quantidadePedidos faca
+      escolha codigo[i]
+         caso 1
+            escreval(i, " - Cachorro Quente")
+         caso 2
+            escreval(i, " - Hambúrguer")
+         caso 3
+            escreval(i, " - Misto Quente")
+         caso 4
+            escreval(i, " - Refrigerante")
+      fimescolha
+   fimpara
+
+   escreval("")
+   escreval("1 - Cancelar compra")
+   escreval("2 - Ir para pagamento")
+   escreval("Escolha uma opção: ")
+   leia(pagamentoOuCancelamento)
+   escolha pagamentoOuCancelamento
+      caso 1
+         escreval("Compra cancelada.")
+      caso 2
+         escreval("Valor total do pedido: R$", precoPedido:0:2)
+         escreval("")
+         escreval("Escolha a forma de pagamento:")
+         escreval("1 - Cartão de crédito")
+         escreval("2 - Cartão de débito")
+         leia(formaPagamento)
+         escolha formaPagamento
+            caso 1
+               escreval("Pagamento no cartão de crédito realizado!")
+            caso 2
+               escreval("Pagamento no cartão de débito realizado!")
+            outrocaso
+               escreval("Forma de pagamento inválida!")
+         fimescolha
+      outrocaso
+         escreval("Opção inválida.")
+   fimescolha
+fimalgoritmo
