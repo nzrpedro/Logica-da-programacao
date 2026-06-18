@@ -44,7 +44,7 @@ programa
 			{
 				escreva("\n=== ITENS DISPONÍVEIS ===\n")
 				escreva("1 - Bateria Energética (", bateriaEnergia, ")\n")
-				escreva("2 - Kit de Reparo Instantâneo (", kitReparo, ")\n")
+				escreva("2 - Kit de Reparos Leves (", kitReparo, ")\n")
 				escreva("3 - Míssil Nuclear Espacial (", missilNuclear, ")\n")
 				leia(item)
 
@@ -52,7 +52,7 @@ programa
 				{
 					se (bateriaEnergia > 0)
 					{
-						energiaJogador = energiaJogador + 50
+						energiaJogador = energiaJogador + 65
 						se (energiaJogador > 100)
 						{
 							energiaJogador = 100
@@ -70,7 +70,7 @@ programa
 					se (kitReparo > 0)
 					{
 						kitReparo--
-						energiaJogador = energiaJogador + 30
+						energiaJogador = energiaJogador + 45
 
 						se (energiaJogador > 100)
 						{
