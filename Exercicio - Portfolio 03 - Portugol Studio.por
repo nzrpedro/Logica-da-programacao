@@ -18,11 +18,11 @@ programa
 
         escreva("\nNúmero sorteado: ", numero, "\n")
 
-        dia     = cal.dia_mes_atual()
-        mes     = cal.mes_atual()
-        ano     = cal.ano_atual()
-        hora    = cal.hora_atual(falso)
-        minuto  = cal.minuto_atual()
+        dia = cal.dia_mes_atual()
+        mes = cal.mes_atual()
+        ano = cal.ano_atual()
+        hora = cal.hora_atual(falso)
+        minuto = cal.minuto_atual()
         segundo = cal.segundo_atual()
 
         escreva("Data e hora do sorteio: ")
