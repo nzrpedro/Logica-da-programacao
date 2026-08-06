@@ -1,0 +1,35 @@
+programa
+{
+	inclua biblioteca Texto
+	inclua biblioteca Matematica
+	inclua biblioteca Calendario
+	inclua biblioteca Util
+	
+	funcao inicio()
+	{
+		real notas[10]
+		real soma = 0.0
+		inteiro quantidade = 0
+		inteiro i
+
+          escreva("Digite suas notas: \n")
+		para(i = 0;i < 10; i++)
+		{
+			leia(notas[i])
+		}
+		para(i = 0;i < 10; i++)
+		{
+			soma = soma + notas[i]
+		}
+		real media = soma / 10
+		para(i = 0;i < 10; i++)
+		{
+			se(notas[i] > media)
+			{
+				quantidade++
+			}
+		}
+		escreva("A quantidade de notas maior que a média foi de: ", quantidade,"\n")
+		escreva("A média das notas foi de: ", media,"\n")
+	}
+}
