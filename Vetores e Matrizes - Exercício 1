@@ -1,0 +1,20 @@
+programa
+{
+    funcao inicio()
+    {
+    inteiro v[8]
+    inteiro i
+
+    escreva("Digite os 8 valores: \n")
+    para(i = 0;i < 8; i++)
+    {
+    leia(v[i])
+    }
+    escreva("Números multiplicados por 2: \n")
+    para(i = 0;i < 8; i++)
+    {
+    v[i] = v[i] * 2
+    escreva(v[i]," \n")
+    }
+    }
+}
