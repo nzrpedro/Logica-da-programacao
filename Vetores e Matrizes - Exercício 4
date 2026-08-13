@@ -27,7 +27,7 @@ programa
 		{
 			para(j = 0; j < 3; j++)
 			{
-				escreva(m[i][j], "\t")
+				escreva("[", m[i][j], "]\t")
 			}
 			escreva("\n")
 		}
