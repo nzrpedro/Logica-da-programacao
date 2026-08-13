@@ -1,0 +1,33 @@
+programa
+{
+	inclua biblioteca Util
+	inclua biblioteca Texto
+	inclua biblioteca Matematica
+	inclua biblioteca Calendario
+	
+	inteiro m[3][3]
+	inteiro i
+	inteiro j
+	
+	funcao inicio()
+	{
+	escreva("Digite um número para armazenar: \n")
+		para(i = 0;i < 3; i++)
+		{
+			para(j = 0;j < 3;j++)
+			{
+			leia(m[i][j])
+			}
+		}
+		limpa()
+		escreva("\nTabela:\n")
+		para(i = 0;i < 3;i++)
+		{
+			para(j = 0;j < 3;j++)
+			{
+				escreva(m[i][j], "\t")
+			}
+			escreva("\n")
+		}
+	}
+}
