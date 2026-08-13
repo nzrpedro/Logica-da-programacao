@@ -1,0 +1,55 @@
+programa
+{
+	inclua biblioteca Util
+	inclua biblioteca Texto
+	inclua biblioteca Matematica
+	inclua biblioteca Calendario
+	
+	inteiro m[4][3]
+	inteiro i
+	inteiro j
+	inteiro somaLinha = 0
+	inteiro somaColuna = 0
+	
+	funcao inicio()
+	{
+		escreva("Digite os números para armazenar:\n")
+		para(i = 0; i < 4; i++)
+		{
+			para(j = 0; j < 3; j++)
+			{
+				leia(m[i][j])
+			}
+		}
+		limpa()
+		escreva("\nTabela:\n")
+		para(i = 0; i < 4; i++)
+		{
+			para(j = 0; j < 3; j++)
+			{
+				escreva(m[i][j], "\t")
+			}
+			escreva("\n")
+		}
+		escreva("\nSoma das linhas:\n")
+		para(i = 0; i < 4; i++)
+		{
+			somaLinha = 0
+			para(j = 0; j < 3; j++)
+			{
+				somaLinha = somaLinha + m[i][j]
+			}
+			escreva("Linha ", i + 1, ": ", somaLinha, "\n")
+		}
+		escreva("\nSoma das colunas:\n")
+		para(j = 0; j < 3; j++)
+		{
+			somaColuna = 0
+			para(i = 0; i < 4; i++)
+			{
+				somaColuna = somaColuna + m[i][j]
+			}
+			escreva("Coluna ", j + 1, ": ", somaColuna, "\n")
+		}
+	}
+}
